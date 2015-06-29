@@ -1,0 +1,23 @@
+@import "variables";
+@import "vendor/materialize/sass/materialize";
+
+.nav-wrapper{
+    padding: 0 2em;
+}
+.brand-logo{
+    background-image: url("../logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 2em;
+    height: 2em;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+form{
+    background-color:rgba(12,232,187, .2);
+}
+.section{
+    width: 65%;
+}
