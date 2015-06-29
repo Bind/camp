@@ -15,9 +15,23 @@
     display: inline-block;
 }
 
-form{
-    background-color:rgba(12,232,187, .2);
+form#interest-form{
+    background-color:rgba(12,232,187, .4);
+    padding:1em .75rem;
+}
+.card-panel{
+    border-top: 2px solid $primary-color;
+    border-radius: 0px !important;
 }
 .section{
-    width: 65%;
+}
+
+.border-top{
+    border-top: 4px solid $primary-color;
+}
+.mail-icon{
+    background-color:white;
+}
+section.row+section.row{
+    margin-top:4em;
 }
