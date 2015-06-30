@@ -1,8 +1,21 @@
 @import "variables";
 @import "vendor/materialize/sass/materialize";
+p, h6, h5, h4, h3, h2, h1{
+    teext-align: center;
+}
+
+blockquote{
+      border-left: 10px solid $accent-color;
+}
+section{
+    baackground-color:rgba(12,232,187, .4);
+}
 
 .nav-wrapper{
     padding: 0 2em;
+}
+.center-text{
+    text-align: center;
 }
 .brand-logo{
     background-image: url("../logo.png");
@@ -14,17 +27,60 @@
     margin-left: 6px;
     display: inline-block;
 }
+.parents-height-wrapper{
+    position: relative;
+    box-sizing: border-box;
+}
+.parents-height{
+    @media #{$medium-and-up} {
+        position:absolute;
+        height: 100%;
+    }
 
-form#interest-form{
-    background-color:rgba(12,232,187, .4);
-    padding:1em .75rem;
 }
 .card-panel{
-    border-top: 2px solid $primary-color;
     border-radius: 0px !important;
+.row{
+    margin-bottom: 0px;
 }
-.section{
+.tray{
+    background-color:white;
 }
+}
+#media{
+    background-color:$secondary-accent;
+    padding:2em;    
+    padding-bottom: 6em;
+}
+
+#about{
+    margin-top: 5em;
+    margin-bottom: 8em;
+     @media #{$medium-and-up} {
+        h1{
+            font-size:7.2rem;
+        }
+    }
+    @media #{$small-and-down} {
+        h1{
+            font-size:6.2rem;
+        }
+
+    }
+
+
+
+
+}
+#interest-form{
+    background-color:$primary-dull;
+    padding: 4em 2em; 
+}
+#faq{
+  border-top: 4px solid $primary-color;
+}
+
+
 
 .border-top{
     border-top: 4px solid $primary-color;
@@ -34,4 +90,15 @@ form#interest-form{
 }
 section.row+section.row{
     margin-top:4em;
+}
+
+.row .col.third{
+    @media #{$medium-and-up} {
+    width: 30%;
+}
+}
+.col.third+.col.third{
+ @media #{$medium-and-up} {
+    margin-left:5%;
+}
 }
