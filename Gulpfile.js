@@ -2,7 +2,9 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    minifycss = require('gulp-minify-css');
+    minifycss = require('gulp-minify-css'),
+    ngrok = require("ngrok"),
+    config= require("./config");
 
 
 
@@ -16,6 +18,18 @@ gulp.task('styles', function(){
     })
 
 
+
+
+  ngrok.connect({
+      authtoken: config.ngrok_key,
+      subdomain: config.ngrok_subdomain,
+      port:3000
+    }, function(err, url){
+      if(err){
+        console.log("ngrok is awesome go register at")
+      }
+      console.log("Project is exposed at",url)
+      })
 
 gulp.task('watch', function(){
 gulp.watch('static/sass/*.scss', ['styles']);

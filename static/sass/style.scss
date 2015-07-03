@@ -1,15 +1,14 @@
 @import "variables";
 @import "vendor/materialize/sass/materialize";
-p, h6, h5, h4, h3, h2, h1{
-    teext-align: center;
-}
 
 blockquote{
       border-left: 10px solid $accent-color;
 }
-section{
-    baackground-color:rgba(12,232,187, .4);
+strong, .strong{
+    text-transform: uppercase;
+    font-size:.8em;
 }
+
 
 .nav-wrapper{
     padding: 0 2em;
@@ -47,15 +46,16 @@ section{
     background-color:white;
 }
 }
+
+
 #media{
     background-color:$secondary-accent;
     padding:2em;    
-    padding-bottom: 6em;
 }
 
 #about{
-    margin-top: 5em;
-    margin-bottom: 8em;
+    margin-top: 8em;
+    margin-bottom: 12em;
      @media #{$medium-and-up} {
         h1{
             font-size:7.2rem;
@@ -74,18 +74,35 @@ section{
 }
 #interest-form{
     background-color:$primary-dull;
-    padding: 4em 2em; 
+    form{
+        position:relative;
+        margin-top: 2em;
+        margin-bottom: 6em;
+        padding-bottom:2em;
+        &:before{
+            content:"";
+            position: absolute;
+            height: 100%;
+            width: 10px;
+            background-color: $primary-color;
+            left: -10px;
+        }
+        button{
+            margin-top:2em;
+        }
+    }
+
+
 }
 #faq{
   border-top: 4px solid $primary-color;
 }
 
-
-
 .border-top{
     border-top: 4px solid $primary-color;
 }
 .mail-icon{
+    margin-top:2em;
     background-color:white;
 }
 section.row+section.row{
@@ -95,6 +112,7 @@ section.row+section.row{
 .row .col.third{
     @media #{$medium-and-up} {
     width: 30%;
+    min-height: 300px;
 }
 }
 .col.third+.col.third{
@@ -102,3 +120,20 @@ section.row+section.row{
     margin-left:5%;
 }
 }
+.js-copy-wrapper{
+position:relative;
+transition:  all .2s ease-in; 
+opacity: 1;
+whitespace: nowrap;
+transform: translate(0,0);
+border-bottom: 1px solid $primary-color;        
+
+}
+
+.exit{
+   opacity: 0;
+}
+
+.js-copy{
+}
+

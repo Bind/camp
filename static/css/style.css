@@ -10414,16 +10414,13 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em;
   }
 }
-p, h6, h5, h4, h3, h2, h1 {
-  teext-align: center;
-}
-
 blockquote {
   border-left: 10px solid #E8460C;
 }
 
-section {
-  baackground-color: rgba(12, 232, 187, 0.4);
+strong, .strong {
+  text-transform: uppercase;
+  font-size: .8em;
 }
 
 .nav-wrapper {
@@ -10470,12 +10467,11 @@ section {
 #media {
   background-color: rgba(232, 70, 12, 0.2);
   padding: 2em;
-  padding-bottom: 6em;
 }
 
 #about {
-  margin-top: 5em;
-  margin-bottom: 8em;
+  margin-top: 8em;
+  margin-bottom: 12em;
 }
 @media only screen and (min-width: 601px) {
   #about h1 {
@@ -10490,7 +10486,23 @@ section {
 
 #interest-form {
   background-color: rgba(12, 232, 187, 0.2);
-  padding: 4em 2em;
+}
+#interest-form form {
+  position: relative;
+  margin-top: 2em;
+  margin-bottom: 6em;
+  padding-bottom: 2em;
+}
+#interest-form form:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  background-color: #0CE8BB;
+  left: -10px;
+}
+#interest-form form button {
+  margin-top: 2em;
 }
 
 #faq {
@@ -10502,6 +10514,7 @@ section {
 }
 
 .mail-icon {
+  margin-top: 2em;
   background-color: white;
 }
 
@@ -10512,6 +10525,7 @@ section.row + section.row {
 @media only screen and (min-width: 601px) {
   .row .col.third {
     width: 30%;
+    min-height: 300px;
   }
 }
 
@@ -10519,4 +10533,20 @@ section.row + section.row {
   .col.third + .col.third {
     margin-left: 5%;
   }
+}
+
+.js-copy-wrapper {
+  position: relative;
+  -webkit-transition: all .2s ease-in;
+          transition: all .2s ease-in;
+  opacity: 1;
+  whitespace: nowrap;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  border-bottom: 1px solid #0CE8BB;
+}
+
+.exit {
+  opacity: 0;
 }
