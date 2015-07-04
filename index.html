@@ -205,6 +205,7 @@
   });
 
   $('form').on('submit', function(){
+    $("button.btn").text("SENT!");
     $.ajax({
       url:"/subscribe",
       contentType: 'application/json',
