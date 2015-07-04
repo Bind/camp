@@ -30,7 +30,11 @@ app.post('/subscribe', function(req,res){
     res.send(200)
 })
 
-var server = app.listen(3000, function () {
+
+var PORT = process.env.PORT || 30000
+
+
+var server = app.listen(PORT, function () {
 
   var host = server.address().address;
   var port = server.address().port;
